@@ -1,11 +1,10 @@
 package com.shike.baselibrary.model;
 
 import android.content.Context;
-import android.util.Log;
 
 import com.google.gson.Gson;
 import com.shike.baselibrary.BaseConfig;
-import com.shike.baselibrary.utils.ResponseEntityToModule.ResponseEntityToModule;
+import com.shike.baselibrary.okhttp.ResponseEntityToModule;
 import com.shike.baselibrary.utils.SharepreferenceUtils;
 
 import java.lang.reflect.Field;
@@ -14,7 +13,7 @@ import java.lang.reflect.Field;
  * Created by snoopy on 2017/11/13.
  */
 
-public class BaseBean {
+public class SKBaseBean {
 
     public void saveJson(Context context) {
         SharepreferenceUtils.saveString(context,getKey(), new Gson().toJson(this));

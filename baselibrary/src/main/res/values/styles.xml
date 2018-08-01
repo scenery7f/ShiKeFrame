@@ -22,6 +22,16 @@
         <item name="android:windowFullscreen">true</item>//全屏即无通知栏
     </style>
 
+    <!--加载进度对话框样式-->
+    <style name="Dialog_Fullscreen">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">true</item><!--模糊-->
+    </style>
+
 
     <style name="tab_menu_item">
         <item name="android:layout_width">0dp</item>

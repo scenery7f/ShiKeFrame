@@ -45,4 +45,5 @@ dependencies {
 
     implementation 'com.squareup.okhttp3:okhttp:3.11.0'
     implementation 'io.realm:realm-android:0.84.1'
+    implementation 'com.wang.avi:library:2.1.3'
 }

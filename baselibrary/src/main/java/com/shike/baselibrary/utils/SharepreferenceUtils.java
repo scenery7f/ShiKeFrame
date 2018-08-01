@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 public class SharepreferenceUtils {
-    public static String SP_NAME = "face_sp";
+    public static String SP_NAME = "shike";
     private static SharedPreferences sp;
 
     public static void saveString(Context context, String key, String value) {
@@ -26,11 +26,9 @@ public class SharepreferenceUtils {
         sp.edit().putBoolean(key, value).commit();
     }
 
-    public static boolean getBoolean(Context context, String key,
-                                     boolean defValue) {
+    public static boolean getBoolean(Context context, String key, boolean defValue) {
         if (sp == null) {
             sp = context.getSharedPreferences(SP_NAME, 0);
-
         }
         return sp.getBoolean(key, defValue);
     }

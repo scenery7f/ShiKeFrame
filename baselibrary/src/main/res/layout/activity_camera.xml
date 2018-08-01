@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.xinkao.holidaywork.ui.common.camera.RatioLinearLayout
+            android:id="@+id/ratio_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            app:ratio=".75">
+            <SurfaceView
+                android:id="@+id/show_camera"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.xinkao.holidaywork.ui.common.camera.RatioLinearLayout>
+
+        <ImageView
+            android:id="@+id/camera_pic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/black">
+            <ImageView
+                android:onClick="onBackAction"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:src="@drawable/ic_action_back"/>
+            <ImageView
+                android:tag="off"
+                android:id="@+id/flash_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:src="@drawable/ic_action_flash_off"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottom_paizhao"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ratio_layout"
+            android:background="@color/black">
+            <ImageView
+                android:id="@+id/camera_btn"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:padding="8dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_action_camera"/>
+            <ImageView
+                android:id="@+id/change_camera"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:padding="4dp"
+                android:layout_marginRight="8dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_action_change_camera"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottom_chuli"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@color/black"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/anew"
+                android:layout_width="80dp"
+                android:layout_height="52dp"
+                android:textSize="18sp"
+                android:text="重拍"
+                android:gravity="center"
+                android:onClick="anew"/>
+
+            <TextView
+                android:id="@+id/save"
+                android:layout_width="80dp"
+                android:layout_height="52dp"
+                android:layout_alignParentRight="true"
+                android:textSize="18sp"
+                android:text="确定"
+                android:gravity="center"
+                android:onClick="save"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/focus_img"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_action_focus_start"/>
+
+</RelativeLayout>

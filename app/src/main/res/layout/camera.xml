@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="1dp" >
+
+        <TextView
+            android:id="@+id/photozoom"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/pop_top_selector"
+            android:gravity="center"
+            android:text="相册"
+            android:textColor="#8F8F8F"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/ccd_title"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp" />
+
+        <TextView
+            android:id="@+id/takephoto"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/pop_bottom_selector"
+            android:gravity="center"
+            android:text="拍照"
+            android:textColor="#8F8F8F"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/pop_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/pop_cancel_selector"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="#037BFF"
+        android:textSize="16sp" />
+
+</LinearLayout>

@@ -1,6 +1,7 @@
 package com.shike.baselibrary.fragment;
 
 
+import android.app.Activity;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,6 +11,7 @@ import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 /**
  * Created by Administrator on 2017-7-6.
@@ -108,6 +110,13 @@ public abstract class BaseFragment extends Fragment implements InitInterfaceFrag
 
             return null;
 
+        }
+    }
+
+    protected void showToast(String msg) {
+        Activity activity = getActivity();
+        if (activity != null) {
+            Toast.makeText(activity, msg, Toast.LENGTH_SHORT).show();
         }
     }
 
