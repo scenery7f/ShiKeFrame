@@ -4,6 +4,7 @@ fast frame
 Gradle:
 
 Step 1. Add the JitPack repository to your build file
+
     allprojects {
         repositories {
             ...
@@ -12,6 +13,7 @@ Step 1. Add the JitPack repository to your build file
     }
 
 Step 2. Add the dependency
+
     dependencies {
             implementation 'com.github.scenery7f:ShiKeFrame:v1.2'
     }
