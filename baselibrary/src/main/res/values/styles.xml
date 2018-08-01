@@ -1,0 +1,42 @@
+<resources>
+
+    <!--继承AppTheme.Base 实现-->
+    <!--<item name="colorPrimaryDark">颜色</item> -->
+    <!--<item name="colorPrimary">颜色</item>-->
+    <!--系统主题色-->
+    <style name="AppTheme.Base" parent="Theme.AppCompat">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/colorgrayback</item>
+        <item name="contentInsetStart">0dp</item><!-- 设置该属性解决空白部分-->
+        <item name="contentInsetEnd">0dp</item>
+    </style>
+
+
+    <!--继承LaunchAction.Base 实现-->
+    <!--<item name="android:windowBackground">启动图</item>-->
+    <!--启动图设置-->
+    <style name="LaunchAction.Base" parent="Theme.AppCompat.Light">
+        <item name="android:windowNoTitle">true</item>//无标题
+        <item name="android:windowActionBar">false</item>//无ActionBar
+        <item name="android:windowFullscreen">true</item>//全屏即无通知栏
+    </style>
+
+
+    <style name="tab_menu_item">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:textColor">@color/colorgraytext</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="spanner_type">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+</resources>
