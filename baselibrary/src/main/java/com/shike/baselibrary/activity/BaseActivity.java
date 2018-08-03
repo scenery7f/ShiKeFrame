@@ -45,7 +45,12 @@ public abstract class BaseActivity extends AppCompatActivity implements InitList
         setTitle(title);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(dhaue);
-
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         return toolbar;
     }
 
