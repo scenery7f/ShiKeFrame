@@ -1,5 +1,6 @@
 package com.shike.baselibrary.activity;
 
+import android.app.Application;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
@@ -11,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Toast;
 
+import com.shike.baselibrary.App;
 import com.shike.baselibrary.R;
 
 /**

@@ -13,16 +13,10 @@ import java.util.List;
 public class App extends Application {
 
     private List<Activity> mList = new LinkedList<Activity>();
-    public static App getInstance() {
-        return instance;
-    }
-
-    private static App instance;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        instance = this;
     }
 
     // add Activity

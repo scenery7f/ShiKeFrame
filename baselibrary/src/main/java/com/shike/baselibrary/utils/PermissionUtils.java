@@ -214,7 +214,7 @@ public class PermissionUtils {
                 .setNegativeButton("退出App", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        App.getInstance().exit();
+                        ((App)context.getApplication()).exit();
                     }
                 })
                 .create()

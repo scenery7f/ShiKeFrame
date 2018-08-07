@@ -3,7 +3,6 @@ package com.shike.baselibrary.model;
 import android.content.Context;
 
 import com.google.gson.Gson;
-import com.shike.baselibrary.BaseConfig;
 import com.shike.baselibrary.okhttp.ResponseEntityToModule;
 import com.shike.baselibrary.utils.SharepreferenceUtils;
 
@@ -58,7 +57,7 @@ public class SKBaseBean {
     }
 
     private String getKey() {
-        String key = BaseConfig.user_id + getClass().getName();
+        String key = getClass().getName();
 
         return key;
     }
