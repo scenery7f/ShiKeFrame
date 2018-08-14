@@ -12,5 +12,3 @@ public class HttpConstants {
     public final static String LOGIN = BASE_URL + "/user/login";
 
 }
-
-
