@@ -25,7 +25,7 @@ public class CommonOkHttpClient {
 
     static {
         OkHttpClient.Builder okHttpClientBuilder = new OkHttpClient.Builder();
-        okHttpClientBuilder.addNetworkInterceptor(new LogInterceptor());
+        okHttpClientBuilder.addInterceptor(new LogInterceptor());
         okHttpClientBuilder.hostnameVerifier(new HostnameVerifier() {
             @Override
             public boolean verify(String hostname, SSLSession session) {
