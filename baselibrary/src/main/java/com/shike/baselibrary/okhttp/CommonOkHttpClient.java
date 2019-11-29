@@ -1,5 +1,6 @@
 package com.shike.baselibrary.okhttp;
 
+import com.shike.baselibrary.BuildConfig;
 import com.shike.baselibrary.okhttp.https.HttpsUtils;
 import com.shike.baselibrary.okhttp.listener.DisposeDataHandle;
 import com.shike.baselibrary.okhttp.response.CommonFileCallback;
@@ -24,7 +25,8 @@ public class CommonOkHttpClient {
 
     static {
         OkHttpClient.Builder okHttpClientBuilder = new OkHttpClient.Builder();
-        okHttpClientBuilder.addInterceptor(new LogInterceptor());
+        if (BuildConfig.SHOW_LOG)
+            okHttpClientBuilder.addNetworkInterceptor(new LogInterceptor());
         okHttpClientBuilder.hostnameVerifier(new HostnameVerifier() {
             @Override
             public boolean verify(String hostname, SSLSession session) {
