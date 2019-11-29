@@ -1,5 +1,6 @@
 package com.shike.shikeframe.http;
 
+import com.shike.baselibrary.model.SKBaseBean;
 import com.shike.baselibrary.okhttp.CommonOkHttpClient;
 import com.shike.baselibrary.okhttp.listener.DisposeDataHandle;
 import com.shike.baselibrary.okhttp.listener.DisposeDataListener;
@@ -40,5 +41,11 @@ public class RequestCenter {
         postRequest(HttpConstants.LOGIN, params, listener, JavaBean.class);
     }
 
+    public static void getGradeList(String schoolCode, String schoolId, DisposeDataListener listener) {
+        RequestParams params = new RequestParams();
+        params.put("schoolcode", schoolCode);
+        params.put("schoolid", schoolId);
 
+        RequestCenter.postRequest(HttpConstants.GETGRADELIST, params, listener, SKBaseBean.class);
+    }
 }

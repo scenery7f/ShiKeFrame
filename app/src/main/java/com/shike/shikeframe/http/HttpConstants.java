@@ -7,8 +7,10 @@ package com.shike.shikeframe.http;
  */
 public class HttpConstants {
 
-    private final static String BASE_URL = "http://10.10.20.18:8080";
+    private final static String BASE_URL = "http://mem.reps.com.cn";
 
-    public final static String LOGIN = BASE_URL + "/user/login";
+    public final static String LOGIN = BASE_URL + "/Api-Login-login.html";
+
+    public final static String GETGRADELIST = "http://usr.xinkaoyun.com/api/banpai/GetGradeList";
 
 }

@@ -1,8 +1,13 @@
 package com.shike.shikeframe;
 
 import com.shike.baselibrary.activity.BaseActivity;
+import com.shike.baselibrary.okhttp.listener.DisposeDataListener;
 import com.shike.baselibrary.utils.xListView.XListView;
 import com.shike.shikeframe.adapter.Adapter;
+import com.shike.shikeframe.http.RequestCenter;
+
+import java.io.UnsupportedEncodingException;
+import java.text.ParseException;
 
 public class MainActivity extends BaseActivity {
 
@@ -22,6 +27,7 @@ public class MainActivity extends BaseActivity {
         xListView.setPullRefreshEnable(true);
 
         xListView.setAdapter(new Adapter(this));
+
     }
 
     @Override
@@ -31,5 +37,18 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void initData() {
+
+        RequestCenter.getGradeList("50", "003", new DisposeDataListener() {
+            @Override
+            public void onSuccess(Object responseObj) throws UnsupportedEncodingException, ParseException {
+
+            }
+
+            @Override
+            public void onFailure(Object reasonObj) {
+
+            }
+        });
+
     }
 }
