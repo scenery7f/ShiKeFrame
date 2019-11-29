@@ -22,10 +22,6 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            buildConfigField("boolean", "SHOW_LOG", "false")
-        }
-        debug {
-            buildConfigField("boolean", "SHOW_LOG", "true")
         }
     }
 
