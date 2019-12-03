@@ -15,7 +15,6 @@ public class LogInterceptor implements Interceptor {
 
     @Override
     public Response intercept(Chain chain) throws IOException {
-        Log.d(TAG,"----------AAAAA----------------");
         Request request = chain.request();
         long startTime = System.currentTimeMillis();
         okhttp3.Response response = chain.proceed(chain.request());
@@ -34,7 +33,11 @@ public class LogInterceptor implements Interceptor {
                 for (int i = 0; i < body.size(); i++) {
                     sb.append(body.encodedName(i) + "=" + body.encodedValue(i) + ",");
                 }
-                sb.delete(sb.length() - 1, sb.length());
+
+//                if (sb.length() > 0) {
+//                    sb.delete(sb.length() - 1, sb.length());
+//                }
+
                 Log.d(TAG, "| RequestParams:{"+sb.toString()+"}");
             }
         }
